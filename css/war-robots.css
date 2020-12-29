@@ -144,15 +144,17 @@ a {
 }
 .lan-btn-selector{
     display: none;
-    width: 200px;
+    width: 210px;
     border: 1px;
-    margin-top: 5px;
     position: absolute;
     color: white;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0,0,0,.6);
     padding: 5px 10px;
     border-radius: 10px;
-    overflow-y: scroll;
+}
+.lan-btn-selector li {
+    margin-right: 0;
+    width: 100%;
 }
 .lan-btn-selector::-webkit-scrollbar {
     width: 5px;
@@ -744,4 +746,29 @@ margin-left: 200px;
     font-weight: 400;
     font-size: 18px;
     margin-top: 30px;
+}
+.hidden {
+    display: none;
+  }
+.nav-menu .menu-list > li:hover .lan-btn-selector{
+    display: block;
+}
+.lan-btn-selector > li:hover .hidden{
+    display:block
+    
+}
+.hidden{
+    display: none;
+    width: 210px;
+    border: 1px;
+    position: absolute;
+    color: white;
+    background-color: rgba(0,0,0,.6);
+    padding: 5px 10px;
+    border-radius: 10px;
+    top: 0px;
+    left: 100%;
+}
+.lan-btn-selector > li:hover{
+   background-color: black;
 }

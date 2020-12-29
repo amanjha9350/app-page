@@ -24,10 +24,15 @@ $(document).ready(function(){
         $(targetElement).addClass('active');
         //$('.script').addClass('active');
     });
-    $(".menu-list > li").hover(function(){
-      $(this).children(".lan-btn-selector").show();
-    }, function(){
-      $(this).children(".lan-btn-selector").hide();
+    // $(".menu-list > li").hover(function(){
+    //   $(this).children(".lan-btn-selector").show();
+    // }, function(){
+    //   $(this).children(".lan-btn-selector").hide();
 
-    })
+    // })
+    // $(".visible").hover(function(){
+    //   $(".hidden").show();
+    // },function(){
+    //   $(".hidden ").hide();
+    // })
 });
