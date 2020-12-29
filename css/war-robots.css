@@ -285,7 +285,12 @@ body::-webkit-scrollbar-track {
     color: #fff;
     padding: 18px;
 }
-
+.download-section:hover{
+   background-color:#4f8b06;
+}
+.download-section a{
+    color: white;
+}
 /* Second section */
 .section {
     background-color: #fff;
