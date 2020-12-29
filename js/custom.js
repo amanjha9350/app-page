@@ -13,7 +13,7 @@ $(document).ready(function(){
 
     });
 
-    $('.list-content li').click(function() {
+    $('.list-content > li').click(function() {
         $('.list-content li.active').removeClass('active');
         $('.panel-content.active').removeClass('active');
 
@@ -24,4 +24,10 @@ $(document).ready(function(){
         $(targetElement).addClass('active');
         //$('.script').addClass('active');
     });
+    $(".menu-list > li").hover(function(){
+      $(this).children(".lan-btn-selector").show();
+    }, function(){
+      $(this).children(".lan-btn-selector").hide();
+
+    })
 });
