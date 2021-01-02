@@ -27,21 +27,9 @@
               <a>FEATURES</a>
               <ul class="lan-btn-selector">
                 <li class="visible"><a>GAME CONTROL</a>
-                  <ul class="hidden">
-                    <li>cake</li>
-                    <li>display</li>
-                    <li>games</li>
-                    <li>action</li>
-                  </ul>
                 </li>
 
                 <li>MULTI INSTANCE
-                  <ul class="hidden">
-                    <li>cake</li>
-                    <li>display</li>
-                    <li>games</li>
-                    <li>action</li>
-                  </ul>
                 </li>
                 <li>SMART CONTROL</li>
                 <li>Macros</li>
@@ -81,30 +69,30 @@
               </ul>
             </li>
             <li><a>SUPPORT</a></li>
-            <li class="language-selector">
-              <a>English</a>
-              <ul class="lan-btn-selector">
-                <li>HINDI</li>
-                <li>GERMAN</li>
-                <li>FRENCH</li>
-                <li>SPANISH</li>
-                <li>KOREAN</li>
-                <li>TURKEY</li>
-                <li>PORTUGESE</li>
-              </ul>
-            </li>
 
           </ul>
           <!-- <div class="right-section">
-            <div class="language-selector">
-              <button class="language-selector-btn" type="button"><span>English</span></button>
+            <div>
+              <h3 class="language-btn">
+                <span>English</span>
+              </h3>
+                <ul class="langauge-list">
+                  <li>HINDI</li>
+                  <li>GERMAN</li>
+                  <li>FRENCH</li>
+                  <li>SPANISH</li>
+                  <li>KOREAN</li>
+                  <li>TURKEY</li>
+                  <li>PORTUGESE</li>
+                </ul>
             </div>
           </div> -->
         </nav>
       </div>
     </div>
   </header>
-  <div class="wb-img">
+  <div class="arrow-slide"></div>
+  <div class="wb-img" id="wb-image" data-target="wb-image">
     <figure class="app-banner">
       <img class="logo-war" src="../War-Robots/IMG/war-robots.jpg" alt="War-Robotsd">
     </figure>
@@ -158,13 +146,23 @@
       <div class="download-section">
         <h2><a href="https://www.bluestacks.com/apps/action/war-robots-on-pc.html">Download War Robots on Pc</a></h2>
       </div>
-      <p class="p-content">Already using BlueStacks? <a style="padding-left: 10px;"
-          href="https://www.bluestacks.com/apps/action/war-robots-on-pc.html">Open now</a></p>
+        <p class="p-content">Already using BlueStacks? <a style="padding-left: 10px;"
+          href="https://www.bluestacks.com/apps/action/war-robots-on-pc.html">Open now</a>
+        </p>
     </div>
+    <div class="container">
+      <ul class="tab-list">
+        <li class="active" data-target="overview">OverView</li>
+        <li data-target="gallery">Gallery</li>
+        <li data-target="features">Game-Features</li>
+        <li data-target="htw">How TO Play</li>
+        <li data-target="tat">Tips & Tricks</li>
+      </ul>
+    </div>  
   </div>
   <section class="section">
     <div class="container">
-      <div>
+      <div id="overview" class="overview">
         <h1 class="section2-heading">
           The Future of War Is Here
         </h1>
@@ -193,9 +191,10 @@
             kill your
             enemies. Fight for victory and if you’re lucky, you may earn the Best Pilot title.
           </p>
+          
         </div>
       </div>
-      <div class="section-image">
+      <div id="gallery" class="section-image gallery ">
         <img src="./img/Waar-robots.jpg" alt="robot">
         <img src="./img/robot img 2.png" alt="robot">
         <img src="./img/robot3.png" alt="robot">
@@ -212,7 +211,7 @@
       </div>
     </div>
   </section>
-  <section class="section-third">
+  <section id="features" class="section-third features">
     <div class="container">
       <div class="border">
         <div class="section-div">
@@ -332,7 +331,7 @@
     </div>
 
   </section>
-  <section class="section-fourth">
+  <section id="htw" class="section-fourth htw">
     <div class="container">
       <div>
         <h2 class="h2-div">
@@ -359,7 +358,7 @@
       </p>
     </div>
   </section>
-  <section class="section-lower">
+  <section id="tat" class="section-lower tat">
     <div class="container">
       <div class="content-tips">
         <h2 class="heading-lower">

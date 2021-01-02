@@ -11,7 +11,32 @@ body {
     background-position: top right;
     font-family: 'Roboto', sans-serif;
 }
-
+.arrow-slide {
+    position: fixed;
+    bottom: 8px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background:#0082e5;
+    z-index: 999;
+    border-radius:50%;
+}
+.arrow-slide::after{
+    content: "";
+    border: solid white;
+    border-width: 0px 6px 6px 0px;
+    display: inline-block;
+    transform: rotate(223deg);
+    padding: 3px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    transition: all 0.3s linear;
+    position: absolute;
+    right: 10px;
+    height: 13px;
+    width: 15px;
+    bottom: 1px;
+}
 /* HEADING-SECTION */
 ul {
     list-style: none;
@@ -44,10 +69,12 @@ a {
 }
 
 .header-wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 999;
     width: 100%;
+    background-color:#1f2640;
+    padding-bottom: 20px;
 }
 
 .header-wrapper .container {
@@ -68,7 +95,6 @@ a {
 }
 
 .nav-menu .menu-list {
-    margin-top: -20px;
     color: black;
 }
 
@@ -148,7 +174,7 @@ a {
     border: 1px;
     position: absolute;
     color: white;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.4);
     padding: 5px 10px;
     border-radius: 10px;
 }
@@ -184,9 +210,10 @@ body::-webkit-scrollbar-track {
 /* wb-image-portion */
 
 .wb-img {
-    height: 600px;
+    height: 650px;
     position: relative;
     overflow: hidden;
+    background-position: top right;
 }
 
 .wb-img::before {
@@ -212,14 +239,39 @@ body::-webkit-scrollbar-track {
     width: 100%;
     height: 100%;
 }
+/* tab-list header portion 2nd ============================================================================*/
+.tab-list{
+    display: flex;
+    position: absolute;
+    bottom: -106px;
+    z-index: 4;
+}
+.tab-list > li{
+    margin-right: 20px;
+    font-size: 22px;
+    color: white;
+    margin-left:10px;
+    
+}
+.tab-list > li:hover{
+    color: #37a8ff;
+}
+.tab-list > li.active{
+    color: #37a8ff;
+    border-bottom: 2px solid #37a8ff;
+}
 
 /* right-section-nav */
 .right-section {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
     position: relative;
     height: 100%;
+    margin-left: 100px;
+    top: -3px;
+    
+}
+
+nav.nav-menu{
+    display: flex;
 }
 
 .langauge-selector {
@@ -227,12 +279,79 @@ body::-webkit-scrollbar-track {
     margin-right: 10px;
     height: 100%;
     padding: 0;
-    display: flex;
     align-items: center;
+    position: relative;
+}
+.langauge-list {
+    display: none;
+    position: absolute;
+    background-color:  rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.language-btn {
+    color: white;
+    font-weight: 500;
+    
+}
+.language-btn:hover .language-list{
+    color:red;
+    display: block;
+    
+
+}
+.list-item{
+    display: none;
+    border: 1px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width:150%;
+}
+.list-item li {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 5px;
+    position: relative;
+}
+.cake{
+    position: relative;
+}
+.list-item > li:not(:first-child):after{
+    content: "";
+    border: solid #fff;
+    border-width: 2px 0 0 2px;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-left: 7px;
+    margin-bottom: 5px;
+    transition: all 0.3s linear;
+    transform: rotate(225deg);
+    transition: all 0.3s linear;
+    position: absolute;
+    right:10px;
+    top:7px;
 }
 
-.langauge-selector-btn {
-    background-color: transparent;
+.list-item-cake{
+    display: none;
+    border: 1px;
+    background-color: rgba(0, 0, 0, 0.6);  
+}
+.list-item li.active .list-item-cake {
+    display: block;
+}
+.list-item > li.active:not(:first-child):after{
+    transform: rotate(45deg);
+}
+.list-item-cake li{
+    font-size: 18px;
+    color: white;
+}
+.desserts{
+    display: none;
+    border: 1px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
 }
 
 /* body-content-from-here */
@@ -763,7 +882,7 @@ margin-left: 200px;
     border: 1px;
     position: absolute;
     color: white;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.4);
     padding: 5px 10px;
     border-radius: 10px;
     top: 0px;
@@ -771,4 +890,7 @@ margin-left: 200px;
 }
 .lan-btn-selector > li:hover{
    background-color: black ;
+}
+.hidden > li:hover{
+    background-color: black;
 }
