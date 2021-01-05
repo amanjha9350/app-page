@@ -59,11 +59,84 @@ $(document).ready(function(){
       console.log("scrollToElement: ",scrollToElement);
       $("html,body").animate({ scrollTop: scrollToElement }, "slow");
       //$(targetElement).addClass('active');
-      //$('.script').addClass('active'); 
+      //$('.script').addClass('active');  
   });
 
 
-  // $(window).scroll(function() {
-  //   console.log($(window).scrollTop() )
-  // })
+  $(window).scroll(function() {
+    var scrollTopPos = $(window).scrollTop();
+
+    console.log(scrollTopPos);
+    if(scrollTopPos > 435) {
+      //$('header').css('position','fixed');
+      // $('header').attr('style','position: fixed; background:red;');
+      
+      
+      $('header').addClass('fixed-header');
+       } else {
+        // $('header').css('position','absolute');
+          $("header").removeClass("fixed-header")
+        }
+
+      // Scroll top arrow show and hide==================================================
+      if(scrollTopPos > 450){
+      $('.arrow-slide').css("display",'block');
+      } else {
+      $('.arrow-slide').css('display','none');
+      }
+      // var headerSecond = $(window).scrollTop();
+      // if(headerSecond > 456){
+      //   $(".tab-list").addClass("fixed-header")
+      // } else {
+      //   $(".tab-list").removeClass("fixed-header")
+      // }
+  })  
+  $(window).scroll(function(){
+    var headerSecond = $(window).scrollTop();
+    console.log(headerSecond);
+      if(headerSecond > 550){
+        $(".tab-list").addClass("fixed-header")
+      } else {
+        $(".tab-list").removeClass("fixed-header")
+      }
+
+
+
+    var overviewEle = $('#overview').offset().top - 150;
+    var galeryEle = $('#gallery').offset().top - 150;
+    var featuresEle = $('#features').offset().top - 150;
+    var htwEle = $('#htw').offset().top - 150;
+    var tatEle = $('#tat').offset().top - 150;
+
+    var scrollTopValue = $(window).scrollTop();
+      if(scrollTopValue > overviewEle){
+        $(".tab-list .overview").addClass("active")
+      } else{
+        $(".tab-list .overview").removeClass("active")
+      }
+    if (scrollTopValue > galeryEle){
+      $(".tab-list .overview").removeClass("active")
+      $(".tab-list .gallery").addClass("active")
+    } else {
+      $(".tab-list .gallery").removeClass("active")
+    }
+    if(scrollTopValue > featuresEle){
+       $(".tab-list .gallery").removeClass("active")
+      $('.tab-list .features').addClass("active")
+    } else{
+      $(".tab-list .features").removeClass("active")
+    }
+    if(scrollTopValue > htwEle){
+      $(".tab-list .features").removeClass("active")
+      $(".tab-list .how-to-play").addClass("active")
+    } else{
+      $(".tab-list .how-to-play").removeClass("active")
+    }
+    if(scrollTopValue > tatEle){
+      $(".tab-list .how-to-play").removeClass("active")
+      $(".tab-list .tips-and-tricks").addClass("active")
+    } else{
+      $(".tab-list .tips-and-tricks").removeClass("active")
+    }
+  })
 });
