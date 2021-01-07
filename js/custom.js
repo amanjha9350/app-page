@@ -51,22 +51,35 @@ $(document).ready(function(){
       $('.tab-list > li.active').removeClass('active');
       //$(".active overview").removeClass("active")
 
-      var targetElement = '.' + $(this).data('target');
+      var targetElement = '#' + $(this).data('target');
       //.script = '.' + 'script';
-
+      console.log('targetElement',targetElement);
       $(this).addClass('active');
-      var scrollToElement = $(targetElement).offset().top-150;
-      console.log("scrollToElement: ",scrollToElement);
+      var scrollToElement = $(targetElement).offset().top - 150;
       $("html,body").animate({ scrollTop: scrollToElement }, "slow");
       //$(targetElement).addClass('active');
       //$('.script').addClass('active');  
+  });
+
+  // $('#gallery').slick({
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 300,
+  //   slidesToShow: 1,
+  //   centerMode: true,
+  //   variableWidth: true
+  // });
+  $('#gallery').slick({
+    dots: false,
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll:2
   });
 
 
   $(window).scroll(function() {
     var scrollTopPos = $(window).scrollTop();
 
-    console.log(scrollTopPos);
     if(scrollTopPos > 435) {
       //$('header').css('position','fixed');
       // $('header').attr('style','position: fixed; background:red;');
@@ -93,7 +106,6 @@ $(document).ready(function(){
   })  
   $(window).scroll(function(){
     var headerSecond = $(window).scrollTop();
-    console.log(headerSecond);
       if(headerSecond > 550){
         $(".tab-list").addClass("fixed-header")
       } else {
@@ -102,13 +114,15 @@ $(document).ready(function(){
 
 
 
-    var overviewEle = $('#overview').offset().top - 150;
-    var galeryEle = $('#gallery').offset().top - 150;
-    var featuresEle = $('#features').offset().top - 150;
-    var htwEle = $('#htw').offset().top - 150;
-    var tatEle = $('#tat').offset().top - 150;
+    var overviewEle = $('#overview').offset().top - 180;
+    var galeryEle = $('#gallery').offset().top - 180;
+    var featuresEle = $('#features').offset().top - 180;
+    var htwEle = $('#htw').offset().top - 180;
+    var tatEle = $('#tat').offset().top - 180;
 
     var scrollTopValue = $(window).scrollTop();
+    console.log('scrollTopValue',scrollTopValue);
+    console.log('galeryEle',galeryEle);
       if(scrollTopValue > overviewEle){
         $(".tab-list .overview").addClass("active")
       } else{
@@ -118,9 +132,12 @@ $(document).ready(function(){
       $(".tab-list .overview").removeClass("active")
       $(".tab-list .gallery").addClass("active")
     } else {
+      console.log('removed gallery classs');
+
       $(".tab-list .gallery").removeClass("active")
     }
     if(scrollTopValue > featuresEle){
+      console.log('removed gallery classs featu');
        $(".tab-list .gallery").removeClass("active")
       $('.tab-list .features').addClass("active")
     } else{
@@ -139,4 +156,6 @@ $(document).ready(function(){
       $(".tab-list .tips-and-tricks").removeClass("active")
     }
   })
+
+  
 });

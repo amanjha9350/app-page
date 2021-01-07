@@ -478,7 +478,7 @@ nav.nav-menu{
 } */
 .section-image img:not(:last-child) {
     margin-right: 20px;
-    width: 30%;
+    width: 40% !important;
 }
 
 /* section-third */
