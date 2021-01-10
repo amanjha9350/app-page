@@ -53,7 +53,6 @@ $(document).ready(function(){
 
       var targetElement = '#' + $(this).data('target');
       //.script = '.' + 'script';
-      console.log('targetElement',targetElement);
       $(this).addClass('active');
       var scrollToElement = $(targetElement).offset().top - 150;
       $("html,body").animate({ scrollTop: scrollToElement }, "slow");
@@ -69,12 +68,21 @@ $(document).ready(function(){
   //   centerMode: true,
   //   variableWidth: true
   // });
-  $('#gallery').slick({
-    dots: false,
-    infinite: false,
-    slidesToShow: 4,
-    slidesToScroll:2
+  // $('#gallery').slick({
+  //   dots: false,
+  //   infinite: false,
+  //   slidesToShow: 4,
+  //   slidesToScroll:2
+  // });
+
+  $("#gallery").lightSlider({
+    item: 4,
+    autoWidth: false,
+    slideMove: 1, // slidemove will be 1 if loop is true
+    slideMargin: 30,
   });
+
+  $("#gallery").lightGallery();
 
 
   $(window).scroll(function() {
@@ -121,8 +129,6 @@ $(document).ready(function(){
     var tatEle = $('#tat').offset().top - 180;
 
     var scrollTopValue = $(window).scrollTop();
-    console.log('scrollTopValue',scrollTopValue);
-    console.log('galeryEle',galeryEle);
       if(scrollTopValue > overviewEle){
         $(".tab-list .overview").addClass("active")
       } else{
@@ -132,12 +138,10 @@ $(document).ready(function(){
       $(".tab-list .overview").removeClass("active")
       $(".tab-list .gallery").addClass("active")
     } else {
-      console.log('removed gallery classs');
 
       $(".tab-list .gallery").removeClass("active")
     }
     if(scrollTopValue > featuresEle){
-      console.log('removed gallery classs featu');
        $(".tab-list .gallery").removeClass("active")
       $('.tab-list .features').addClass("active")
     } else{
@@ -156,6 +160,6 @@ $(document).ready(function(){
       $(".tab-list .tips-and-tricks").removeClass("active")
     }
   })
-
   
 });
+ 

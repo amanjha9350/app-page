@@ -459,10 +459,48 @@ nav.nav-menu{
 
 .section-image {
     display: flex;
-    overflow-x: auto;
     padding-right: 20px;
     padding-top: 40px;
 
+}
+.section-image div {
+    height:200px;
+}
+.lSSlideOuter {
+    padding: 0 40px;
+    position: relative;
+}
+.lSSlideWrapper {
+    position: static;
+}
+.lSSlideWrapper .lSAction > a {
+    opacity: 1;
+    background-color: transparent;
+    border: solid white;
+    border-width: 0px 6px 6px 0px;
+    transform: rotate(128deg);
+    padding: 3px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    top: 50%;
+    border-color:deepskyblue;
+}
+.lSSlideWrapper .lSAction > .lSPrev {
+    
+    left: 0;
+    z-index: 999;
+}
+.lSSlideWrapper .lSAction > .lSNext{
+    
+    transform: rotate(-40deg);
+    left: inherit;
+    right: 17px;
+}
+.section-image .slick-list {
+    max-width: 100%;
 }
 
 /* .section-image img:nth-child(2n){
@@ -721,6 +759,11 @@ nav.nav-menu{
     margin-left: 40px;
     margin-top: 60px;
 
+}
+
+.open:hover{
+    border-bottom: #0082e5 solid 1px;
+    padding-left:0px;
 }
 
 .p-tag {
