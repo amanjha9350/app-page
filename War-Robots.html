@@ -9,7 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+  <link rel="stylesheet" href="./css/lightslider.css">
+  <link rel="stylesheet" href="./css/lightgallery.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.14/css/lightgallery.css"> -->
   <link rel="stylesheet" href="./css/War-ROBOTS.css">
+
 </head>
 
 <body>
@@ -25,24 +31,74 @@
           <ul class="menu-list">
             <li>
               <a>FEATURES</a>
+              <ul class="lan-btn-selector">
+                <li class="visible"><a>GAME CONTROL</a>
+                </li>
+
+                <li>MULTI INSTANCE
+                </li>
+                <li>SMART CONTROL</li>
+                <li>Macros</li>
+                <li>NATIVE GAME PAD SUPPORT</li>
+                <li>ECO-MODE</li>
+                <li>ReRolling</li>
+                <li>Mutli-Instance Sync</li>
+                <li>Real-Time Translation</li>
+                <li>Shooting-Mode</li>
+              </ul>
             </li>
             <li>
               <a>GAMES</a>
+              <ul class="lan-btn-selector">
+                <li>Action</li>
+                <li>Roll Play</li>
+                <li>Strategy</li>
+                <li>Adventure</li>
+                <li>Arcade</li>
+                <li>Card</li>
+                <li>Casual</li>
+                <li>Puzzle</li>
+                <li>Racing</li>
+                <li>Simulation</li>
+                <li>sports</li>
+              </ul>
             </li>
-            <li><a>BLOG</a></li>
+            <li>
+              <a>BLOG</a>
+              <ul class="lan-btn-selector">
+                <li>Games</li>
+                <li>App-Reviews</li>
+                <li>Inside Bluestacks</li>
+                <li>Bluestacks Round Up</li>
+                <li>News</li>
+                <li>BlueStacks-Video</li>
+              </ul>
+            </li>
             <li><a>SUPPORT</a></li>
 
           </ul>
           <!-- <div class="right-section">
-            <div class="language-selector">
-              <button class="language-selector-btn" type="button"><span>English</span></button>
+            <div>
+              <h3 class="language-btn">
+                <span>English</span>
+              </h3>
+                <ul class="langauge-list">
+                  <li>HINDI</li>
+                  <li>GERMAN</li>
+                  <li>FRENCH</li>
+                  <li>SPANISH</li>
+                  <li>KOREAN</li>
+                  <li>TURKEY</li>
+                  <li>PORTUGESE</li>
+                </ul>
             </div>
           </div> -->
         </nav>
       </div>
     </div>
   </header>
-  <div class="wb-img">
+  <div class="arrow-slide"></div>
+  <div class="wb-img" id="wb-image" data-target="wb-image ">
     <figure class="app-banner">
       <img class="logo-war" src="../War-Robots/IMG/war-robots.jpg" alt="War-Robotsd">
     </figure>
@@ -94,15 +150,25 @@
         </p>
       </div>
       <div class="download-section">
-        <h2>Download War Robots on Pc</h2>
+        <h2><a href="https://www.bluestacks.com/apps/action/war-robots-on-pc.html">Download War Robots on Pc</a></h2>
       </div>
-      <p class="p-content">Already using BlueStacks? <a style="padding-left: 10px;"
-          href="https://www.bluestacks.com/apps/action/war-robots-on-pc.html">Open now</a></p>
+        <p class="p-content">Already using BlueStacks? <a  class="open" style="padding-left: 10px;"
+          href="https://www.bluestacks.com/apps/action/war-robots-on-pc.html">Open now</a>
+        </p>
     </div>
+    <!-- <div class="container"> -->
+      <ul class="tab-list">
+        <li class="overview active" data-target="overview">OverView</li>
+        <li class="gallery" data-target="gallery">Gallery</li>
+        <li class="features" data-target="features">Game-Features</li>
+        <li class="how-to-play" data-target="htw">How TO Play</li>
+        <li class="tips-and-tricks" data-target="tat">Tips & Tricks</li>
+      </ul>
+    <!-- </div>   -->
   </div>
   <section class="section">
     <div class="container">
-      <div>
+      <div id="overview" class="overview">
         <h1 class="section2-heading">
           The Future of War Is Here
         </h1>
@@ -131,26 +197,27 @@
             kill your
             enemies. Fight for victory and if you’re lucky, you may earn the Best Pilot title.
           </p>
+          
         </div>
       </div>
-      <div class="section-image">
-        <img src="./img/Waar-robots.jpg" alt="robot">
-        <img src="./img/robot img 2.png" alt="robot">
-        <img src="./img/robot3.png" alt="robot">
-        <img src="./img/robot4.png" alt="robot">
-        <img src="./img/robot5.png" alt="rbot">
-        <img src="./img/robot6.png" alt="robot">
-        <img src="./img/robot7.png" alt="robot">
-        <img src="./img/robot8.png" alt="robot">
-        <img src="./img/robot9.png" alt="robot">
-        <img src="./img/robot11.png" alt="robot">
-        <img src="./img/robot12.png" alt="robot">
-        <img src="./img/robot13.png" alt="robot">
-        <img src="./img/robot4.png" alt="robot">
+      <div id="gallery" class="section-image gallery slick-slider">
+        <div data-src="./img/1-1600.jpg"><img class="slick-list"  src="./img/Waar-robots.jpg" alt="robot"></div>
+        <div data-src="./img/2-1600.jpg"><img class="slick-list" src="./img/robot img 2.png" alt="robot"></div>
+        <div data-src="./img/robot3.png"><img class="slick-list" src="./img/robot3.png" alt="robot"></div>
+        <div data-src="./img/robot4.png"><img class="slick-list" src="./img/robot4.png" alt="robot"></div>
+        <div data-src="./img/robot5.png"><img class="slick-list" src="./img/robot5.png" alt="robot"></div>
+        <div data-src="./img/robot6.png"><img class="slick-list" src="./img/robot6.png" alt="robot"></div>
+        <div data-src="./img/robot7.png"><img class="slick-list" src="./img/robot7.png" alt="robot"></div>
+        <div data-src="./img/robot8.png"><img class="slick-list" src="./img/robot8.png" alt="robot"></div>
+        <div data-src="./img/robot9.png"><img class="slick-list" src="./img/robot9.png" alt="robot"></div>
+        <div data-src="./img/robot11.png"><img class="slick-list" src="./img/robot11.png" alt="robot"></div>
+        <div data-src="./img/robot12.png"><img class="slick-list" src="./img/robot12.png" alt="robot"></div>
+        <div data-src="./img/robot13.png"><img class="slick-list" src="./img/robot13.png" alt="robot"></div>
+        <div data-src="./img/robot4.png"><img class="slick-list" src="./img/robot4.png" alt="robot"></div>
       </div>
     </div>
   </section>
-  <section class="section-third">
+  <section id="features" class="section-third features">
     <div class="container">
       <div class="border">
         <div class="section-div">
@@ -169,20 +236,26 @@
           <div class="right-panel">
             <div class="panel-content active eco-mode">
               <img class="img-section" src="./img/FE_Farm_Mode.jpg" alt="FE_Farm_Mode">
-              <p class="content-right">Farm in-game resources with ease in War Robots. Enable the Eco Mode when running the game in multiple instances. And lower your PC's resource consumption.</p>
+              <p class="content-right">Farm in-game resources with ease in War Robots. Enable the Eco Mode when running
+                the game in multiple instances. And lower your PC's resource consumption.</p>
             </div>
             <div class="panel-content script">
               <img class="img-section" src="./img/FE_Script.jpg" alt="FE_Farm_Mode">
-              <p class="content-right">Automate repetitive tasks in War Robots with BlueStacks Script. Write a set of commands to execute a series of actions that you want to automate. Bind it to one key and you are done..</p>
+              <p class="content-right">Automate repetitive tasks in War Robots with BlueStacks Script. Write a set of
+                commands to execute a series of actions that you want to automate. Bind it to one key and you are done..
+              </p>
             </div>
             <div class="panel-content multi-instance">
               <img class="img-section" src="./img/FE_MULTI_INSTANCE.jpg" alt="FE_Farm_Mode">
-              <p class="content-right">Build a kingdom. Collect resources. Do more. With Multi-Instance, playing War Robots is even more thrilling. Open multiple instances and play the same game from different accounts.
+              <p class="content-right">Build a kingdom. Collect resources. Do more. With Multi-Instance, playing War
+                Robots is even more thrilling. Open multiple instances and play the same game from different accounts.
               </p>
             </div>
             <div class="panel-content multi-instance-sync">
               <img class="img-section" src="./img/FE_MULTI_INSTANCE_SYNC.jpg" alt="FE_Farm_Mode">
-              <p class="content-right">With the Multi-instance Sync, you can do even more in War Robots. Sync the action of the main instance and repeat them in real time for all other instances. Sync and sit back, let the game progress unfold.
+              <p class="content-right">With the Multi-instance Sync, you can do even more in War Robots. Sync the action
+                of the main instance and repeat them in real time for all other instances. Sync and sit back, let the
+                game progress unfold.
               </p>
             </div>
           </div>
@@ -193,7 +266,7 @@
           multiple instances. And lower your PC's resource consumption.</h3> -->
       </div>
 
-      <button class="btn btn-read-more">Read More</button>
+      
 
       <div class="lower-container container">
         <div class="read-more-content">
@@ -208,7 +281,8 @@
             </h2>
             <p>
               Focus more on the fun part of the game, skip the tedious aspects. Master War Robots with Macros. Record
-              yourself completing the monotonous tasks you wish to automate and replay them later with just one keypress.
+              yourself completing the monotonous tasks you wish to automate and replay them later with just one
+              keypress.
             </p>
           </div>
           <div class="read-more-macros" style="margin-left:120px;">
@@ -258,12 +332,13 @@
           </div>
         </div>
       </div>
+      <button class="btn btn-read-more">Read More</button>
 
 
     </div>
 
   </section>
-  <section class="section-fourth">
+  <section id="htw" class="section-fourth htw">
     <div class="container">
       <div>
         <h2 class="h2-div">
@@ -273,20 +348,131 @@
           <li class="ul-li-lower"><span>Download and install BlueStacks on your PC</span></li>
           <li class="ul-li-lower"><span>Complete Google sign-in to access the Play Store, or do it later</span></li>
           <li class="ul-li-lower"><span>Look for State of Survival in the search bar at the top right corner</span></li>
-          <li class="ul-li-lower"><span>Click to install State of Survival from the search results</span></li>
+          <li class="ul-li-lower"><span>Click to install war-robots from the search results</span></li>
           <li class="ul-li-lower"><span>Complete Google sign-in (if you skipped step 2) to install State of
               Survival</span></li>
-          <li class="ul-li-lower"><span>Click the State of Survival icon on the home screen to start playing</span></li>
+          <li class="ul-li-lower"><span>Click the War-Robots icon on the home screen to start playing</span></li>
         </ul>
       </div>
       <iframe class="video-frame" height="500px" width="100%" src="https://www.youtube.com/embed/pULTzJqTy20"></iframe>
       <p class="p-tag">
-        In the land of high-tech weapons and grand war robots, only one program stands out as the ultimate weapon. The free BlueStacks 4 is the only Android emulator you will ever need to use. Not only does BlueStacks give you the power to play any Android app or game right on your computer or laptop, but it adds an extra layer of features and benefits that you simply cannot find anywhere else. When you Play Bigger with BlueStacks, you gain access to great features like auto-save of game data and easier gameplay controls. Unlock the true power of your War Robot and download the new and improved BlueStacks 4 player today.
+        In the land of high-tech weapons and grand war robots, only one program stands out as the ultimate weapon. The
+        free BlueStacks 4 is the only Android emulator you will ever need to use. Not only does BlueStacks give you the
+        power to play any Android app or game right on your computer or laptop, but it adds an extra layer of features
+        and benefits that you simply cannot find anywhere else. When you Play Bigger with BlueStacks, you gain access to
+        great features like auto-save of game data and easier gameplay controls. Unlock the true power of your War Robot
+        and download the new and improved BlueStacks 4 player today.
       </p>
     </div>
   </section>
+  <section id="tat" class="section-lower tat">
+    <div class="container">
+      <div class="content-tips">
+        <h2 class="heading-lower">
+          War Robots Tips & Tricks
+        </h2>
+        <ul class="image-tips">
+          <li class="tips-tricks"><img src="./img/WarRobots_TheBestRobotsAndWeaponsof2019_S4.jpg" alt="image">
+            <p class="p-tag-tips">War robots:Begineer and Middle Tier Bots</p>
+          </li>
+          <li class="tips-tricks"><img src="./img/WarRobots_TopRobotBuilds_S2.jpg" alt="image">
+            <p class="p-tag-tips">War robots:The best Robots Build to The Battlefield</p>
+          </li>
+          <li class="tips-tricks"><img src="./img/WarRobots_SpecialAbilityGuide_S3.jpg" alt="image">
+            <p class="p-tag-tips">War robots:A Guide To Special Abilities </p>
+          </li>
+          <li class="tips-tricks"><img src="./img/WarRobots_BeginnerandMiddleTierBots_S4-298x184.jpg" alt="image">
+            <p class="p-tag-tips">War robots:The Best Robots And Weapons Of 2019 </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <footer>
+    <section class="section-footer">
+      <!-- <img class="footer-image" src="./img/war-robots.jpg" alt="war-robots"> -->
+      <div class="container">
+        <h1 class="h1-footer">Unlock your PC's gaming potential. And yours too.</h1>
+        <div>
+          <h3 class="h3-footer-btn">Download BlueStacks</h3>
+        </div>
+      </div>
+    </section>
+    <section class="section-last">
+      <div class="container">
+        <div class="border-footer">
+          <div class="list-item-footer">
+            <ul class="footer-list">
+              <h3 class="heading-footer">Games</h3>
+              <li class="li-footer">ACTION</li>
+              <li>ADVENTURE</li>
+              <li>ARCADE</li>
+              <li>PUZZLE</li>
+              <li>RACING</li>
+              <li>ROLE PLAYING</li>
+              <li>SIMULATION</li>
+              <li>SPORTS</li>
+              <li>STRATEGY</li>
+            </ul>
+            <ul class="footer-list-2">
+              <h3 class="heading-footer">Feature</h3>
+              <li>Game controls</li>
+              <li>MUBA Mode</li>
+              <li>Shooting-Mode</li>
+              <li>Mutli-Instance</li>
+              <li>Multi-instance-sync</li>
+              <li>Macros</li>
+              <li>ECO-MODE</li>
+              <li>Real-Time Translation</li>
+              <li>Smart-Control</li>
+              <li>Rerolling</li>
+              <li>Script</li>
+              <li>High-Fps</li>
+              <li>High-Defination</li>
+      
+              <li>Utility</li>
+              <li>Utc Converter</li>
+            </ul>
+            <ul class="footer-list-2">
+              <h3 class="heading-footer">ABOUT US</h3>
+              <li>
+                Contact US
+      
+              </li>
+              <li>
+                Careers
+              </li>
+              <li>
+                Press kit
+              </li>
+            </ul>
+            <ul class="footer-list-2">
+              <h3 class="heading-footer">Affiliate</h3>
+              <li>Sign Up</li>
+              <h3 class="heading-footer" style="margin-top: 10px;">Support</h3>
+              <li>Update</li>
+            </ul>
+            <ul class="footer-list-2">
+              <h3 class="heading-footer">Engage</h3>
+              <li>Promote Your Game </li>
+              <li>Play Android Game On Pc</li>
+            </ul>
+          </div>
+          
+        </div>
+        <h2 class="terms ">© 2020 BlueStacks name and logo are registered trademarks of Bluestack Systems, Inc.
+
+          Terms and Privacy
+          Copyright Dispute Policy
+          EU Privacy</h2>
+      </div>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="./js/slick.min.js"></script> -->
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.14/js/lightgallery-all.min.js"></script> -->
+        <script src="./js/lightslider.js"></script>
+        <script src="./js/lightgallery-all.min.js"></script>
     <script src="./js/custom.js"></script>
   </footer>
 </body>
