@@ -974,8 +974,20 @@ margin-left: 200px;
     border-left: none ;
 }
 
-@media(max-width:767px) {
+
+/* Mobile Devices 
+   max-width:767px */
+@media (max-width:767px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .header-wrapper .container .nav-menu{
         display: none;
     }
+}
+
+/* min-width:768px and max-width: 1024px */
+@media (min-width: 768px) and (max-width:1024px) {
+
 }
